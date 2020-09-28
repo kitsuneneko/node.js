@@ -2,7 +2,6 @@ var express = require('express');
 var app = express(); 
 var log = require('./libs/log')(module);
 
-
 app.get('/api', function(req, res) { 
     res.send('API is running'); 
 }); 
@@ -14,19 +13,23 @@ app.listen(1337, function() {
 
 app.get('/api/articles', function(req, res) { 
     res.send('This is not implemented now'); 
-    }); 
-    app.post('/api/articles', function(req, res) { 
+}); 
+
+app.post('/api/articles', function(req, res) { 
     res.send('This is not implemented now'); 
-    }); 
-    app.get('/api/articles/:id', function(req, res) { 
+}); 
+
+app.get('/api/articles/:id', function(req, res) { 
     res.send('This is not implemented now'); 
-    }); 
-    app.put('/api/articles/:id', function(req, res) { 
+}); 
+
+app.put('/api/articles/:id', function(req, res) { 
     res.send('This is not implemented now'); 
-    }); 
-    app.delete('/api/articles/:id', function(req, res) { 
+});
+
+app.delete('/api/articles/:id', function(req, res) { 
     res.send('This is not implemented now'); 
-    });
+});
 
 app.get('/ErrorExample', function(req, res, next) { 
     next(new Error('Random error!')); 
