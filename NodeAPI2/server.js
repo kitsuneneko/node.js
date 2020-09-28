@@ -16,7 +16,7 @@ app.get('/api/articles', function(req, res) {
     return ArticleModel.find(function(err, articles) { 
         if(!err) { 
             return res.send(articles); 
-        } else{ 
+        } else { 
             res.statusCode = 500; 
             log.error('Internal  error(%d):  %s', res.statusCode,err.message); 
             return res.send({ error: 'Server error'}); 
@@ -60,7 +60,7 @@ app.get('/api/articles/:id', function(req, res) {
         } 
         if(!err) { 
             return res.send({ status: 'OK', article:article }); 
-        } else{ 
+        } else { 
             res.statusCode = 500; 
             log.error('Internal error(%d): %s',res.statusCode,err.message); 
             return res.send({ error: 'Server error'}); 
@@ -106,7 +106,7 @@ app.delete('/api/articles/:id', function(req, res) {
             if(!err) { 
                 log.info("article removed"); 
                 return res.send({ status: 'OK'}); 
-            } else{ 
+            } else { 
                 res.statusCode = 500; 
             log.error('Internal  error(%d):  %s', res.statusCode,err.message); 
             return res.send({ error: 'Server error'}); 
