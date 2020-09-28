@@ -26,7 +26,7 @@ images: [Images],
 modified: { type: Date, default: Date.now } 
 }); // validation
 Article.path('title').validate(function(v) { 
-returnv.length > 5&& v.length < 70; 
+return v.length > 5&& v.length < 70; 
 }); 
 var ArticleModel = mongoose.model('Article', Article); 
 module.exports.ArticleModel = ArticleModel;
