@@ -52,7 +52,6 @@ app.post('/api/articles', function (req, res) {
     });
 });
 
-
 app.get('/api/articles/:id', function(req, res) { 
     return ArticleModel.findById(req.params.id, function(err, article) { 
         if(!article) { 
